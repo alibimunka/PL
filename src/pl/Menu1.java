@@ -210,8 +210,28 @@ public class Menu1 extends javax.swing.JFrame {
         for (Integer i=0;i<3;i++){
                 TableAdok.setValueAt(myList.get(orszag1)[i], i+1, 1);
                 TableAdok.setValueAt(myList.get(orszag2)[i], i+1, 3);
-                if (myList.get(orszag1)[i] > myList.get(orszag2)[i]) TableAdok.setValueAt(">", i+1, 2);
-                else if (myList.get(orszag1)[i] < myList.get(orszag2)[i]) TableAdok.setValueAt("<", i+1, 2);
+                if (myList.get(orszag1)[i] > myList.get(orszag2)[i]){
+                    String s=">";
+                    Integer o1=myList.get(orszag1)[i];
+                    Integer o2=myList.get(orszag2)[i];
+                    o1-=o2;
+                    for (Integer j=0;j<2;j++) if (o1>o2){
+                        s+=">";
+                        o1-=o2;
+                    }
+                    TableAdok.setValueAt(s, i+1, 2);
+                }
+                else if (myList.get(orszag1)[i] < myList.get(orszag2)[i]){
+                    String s="<";
+                    Integer o1=myList.get(orszag2)[i];
+                    Integer o2=myList.get(orszag1)[i];
+                    o1-=o2;
+                    for (Integer j=0;j<2;j++) if (o1>o2){
+                        s+="<";
+                        o1-=o2;
+                    }
+                    TableAdok.setValueAt(s, i+1, 2);
+                }
                 else TableAdok.setValueAt("=", i+1, 2);
             }
     }//GEN-LAST:event_CompareButtonActionPerformed
