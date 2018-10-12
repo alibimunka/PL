@@ -203,6 +203,8 @@ public class Menu1 extends javax.swing.JFrame {
 
     private void CompareButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompareButtonActionPerformed
         // TODO add your handling code here:
+        
+        //függvényesíteni kéne
         Integer orszag1 = ComboBoxA.getSelectedIndex();
         Integer orszag2 = ComboBoxB.getSelectedIndex();
         TableAdok.setValueAt(ComboBoxA.getItemAt(orszag1), 0, 1);
