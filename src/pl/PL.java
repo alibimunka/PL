@@ -15,6 +15,8 @@ public class PL {
      * @param args the command line arguments
      */
     
+    //Adatok
+    
     //GIT első feltöltés
     public static void main(String[] args) {
         // TODO code application logic here
