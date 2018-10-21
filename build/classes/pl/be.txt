@@ -1,5 +1,5 @@
-Hungary	9	32	27
-Albania	15	23	20
+Hungary	9	32	27  15  10  8.5
+Albania	15	23	20  10  10  10
 Austria	25	55	20
 Belarus	18	15	20
 Belgium	29	50	21
