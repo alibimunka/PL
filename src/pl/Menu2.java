@@ -32,6 +32,7 @@ public class Menu2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Új adórendszer felvitele");
@@ -50,7 +51,7 @@ public class Menu2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Írja be az értékeket!");
+        jLabel1.setText("Írja be az új adórendszer értékeit!");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -61,7 +62,8 @@ public class Menu2 extends javax.swing.JFrame {
                 {"Személyi jövedelemadó", null},
                 {"Nyugdíjjárulék", null},
                 {"Egészségbiztosítási és munkaerőpiaci járulék", null},
-                {"Szociális hozzájárulási adó", null}
+                {"Szociális hozzájárulási adó", null},
+                {null, null}
             },
             new String [] {
                 "Adók", "Értékek"
@@ -71,7 +73,7 @@ public class Menu2 extends javax.swing.JFrame {
                 java.lang.String.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -106,12 +108,14 @@ public class Menu2 extends javax.swing.JFrame {
                         .addComponent(ExitButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(jLabel1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BackButton)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addGap(77, 77, 77)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -123,13 +127,15 @@ public class Menu2 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(BackButton)
-                        .addGap(63, 63, 63)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BackButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(jLabel1)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)))
+                .addGap(68, 68, 68)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
@@ -191,6 +197,7 @@ public class Menu2 extends javax.swing.JFrame {
     private javax.swing.JButton BackButton;
     private javax.swing.JButton ExitButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
