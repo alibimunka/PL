@@ -5,6 +5,16 @@
  */
 package pl;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
+
 /**
  *
  * @author Alibimunka
@@ -33,6 +43,9 @@ public class Menu2 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
+        ButtonKiiras = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        KiirasLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Új adórendszer felvitele");
@@ -55,22 +68,22 @@ public class Menu2 extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Ország", null},
-                {"Társasági adó", null},
-                {"Maximális jövedelemadó", null},
-                {"Normál ÁFA kulcs", null},
-                {"Személyi jövedelemadó", null},
-                {"Nyugdíjjárulék", null},
-                {"Egészségbiztosítási és munkaerőpiaci járulék", null},
-                {"Szociális hozzájárulási adó", null},
-                {null, null}
+                {"Ország", ""},
+                {"Társasági adó", ""},
+                {"Maximális jövedelemadó", ""},
+                {"Normál ÁFA kulcs", ""},
+                {"Személyi jövedelemadó", ""},
+                {"Nyugdíjjárulék", ""},
+                {"Egészségbiztosítási és munkaerőpiaci járulék", ""},
+                {"Szociális hozzájárulási adó", ""},
+                {"Szakképzési hozzájárulási adó", ""}
             },
             new String [] {
                 "Adók", "Értékek"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, true
@@ -97,6 +110,13 @@ public class Menu2 extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setMaxWidth(150);
         }
 
+        ButtonKiiras.setText("Kiírás");
+        ButtonKiiras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKiirasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,7 +136,14 @@ public class Menu2 extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ButtonKiiras)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(KiirasLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -133,9 +160,14 @@ public class Menu2 extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2)))
-                .addGap(68, 68, 68)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addGap(77, 77, 77)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonKiiras)
+                    .addComponent(jLabel3)
+                    .addComponent(KiirasLabel))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -157,6 +189,33 @@ public class Menu2 extends javax.swing.JFrame {
     private void jTable1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jTable1ComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jTable1ComponentAdded
+
+    private void ButtonKiirasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKiirasActionPerformed
+        
+        
+        String adatok="\n";
+        jTable1.getModel().addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent e) {
+       // access the values of the model and save them to the file here
+                TableModel absmodel = (TableModel) jTable1.getModel();
+                jTable1.setModel(absmodel);
+                if (KiirasLabel.getText()!=" "){
+                    KiirasLabel.setText(" ");
+                }
+            }
+        });
+        for (Integer i=0;i<9;i++){
+            adatok+=jTable1.getValueAt(i, 1);
+            if (i<8) adatok+="\t";
+        }
+        try {
+            Files.write(Paths.get("be.txt"), adatok.getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException ex) {
+            Logger.getLogger(Menu2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        KiirasLabel.setText("A kiírás megtörtént!");
+    }//GEN-LAST:event_ButtonKiirasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,9 +254,12 @@ public class Menu2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
+    private javax.swing.JButton ButtonKiiras;
     private javax.swing.JButton ExitButton;
+    private javax.swing.JLabel KiirasLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

@@ -130,7 +130,7 @@ public class Menu1 extends javax.swing.JFrame {
                 java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, true, false, true
             };
 
             public Class getColumnClass(int columnIndex) {

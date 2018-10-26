@@ -239,9 +239,9 @@
                   <Data value="Szoci&#xe1;lis hozz&#xe1;j&#xe1;rul&#xe1;si ad&#xf3;"/>
                   <Data value="Szakk&#xe9;pz&#xe9;si hozz&#xe1;j&#xe1;rul&#xe1;s"/>
                 </Column>
-                <Column editable="false" title="Ad&#xf3;rendszer1" type="java.lang.Integer"/>
+                <Column editable="true" title="Ad&#xf3;rendszer1" type="java.lang.Integer"/>
                 <Column editable="false" title="" type="java.lang.String"/>
-                <Column editable="false" title="Ad&#xf3;rendszer2" type="java.lang.Integer"/>
+                <Column editable="true" title="Ad&#xf3;rendszer2" type="java.lang.Integer"/>
               </Table>
             </Property>
             <Property name="alignmentX" type="float" value="0.7"/>
