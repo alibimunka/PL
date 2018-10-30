@@ -1,9 +1,9 @@
-Hungary	9	32	27	15	10	9	19	2
-Austria	25	55	20	12	10	5	15	3
+Magyarország	9	32	27	15	10	9	19	2
+Ausztria	25	55	20	12	10	5	15	3
 Belgium	29	50	21	13	7	10	14	3
-Germany	23	48	19	16	10	12	9	5
-France	33	49	20	11	7	8	14	7
-Slovenia	22	50	22	10	15	5	12	4
-Slovakia	22	50	20	7	7	6	10	5
-Spain	25	45	21	12	10	4	7	2
-Sweden	22	70	25	14	13	10	6	7	
+Németország	23	48	19	16	10	12	9	5
+Franciaország	33	49	20	11	7	8	14	7
+Szlovénia	22	50	22	10	15	5	12	4
+Szlovákia	22	50	20	7	7	6	10	5
+Spanyolország	25	45	21	12	10	4	7	2
+Svédország	22	70	25	14	13	10	6	7
