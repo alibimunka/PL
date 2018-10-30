@@ -1,5 +1,8 @@
 package pl;
 
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,9 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.JTextField;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.StackedXYBarRenderer;
+import org.jfree.data.xy.CategoryTableXYDataset;
 
 
 /*
@@ -99,6 +109,7 @@ public class Menu1 extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         Adoek_btn = new javax.swing.JButton();
         Bevetel_btn = new javax.swing.JButton();
+        DiagButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Összehasonlítás");
@@ -256,6 +267,13 @@ public class Menu1 extends javax.swing.JFrame {
             }
         });
 
+        DiagButton.setText("Oszlop Diagramm összehasonlít");
+        DiagButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DiagButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -283,10 +301,6 @@ public class Menu1 extends javax.swing.JFrame {
                         .addGap(513, 513, 513)
                         .addComponent(CompareButton)))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,6 +360,15 @@ public class Menu1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel14)))
                 .addGap(121, 121, 121))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(462, 462, 462)
+                        .addComponent(DiagButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -397,18 +420,21 @@ public class Menu1 extends javax.swing.JFrame {
                             .addComponent(jLabel15)
                             .addComponent(jLabel13))
                         .addGap(32, 32, 32)
-                        .addComponent(CompareButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Adoek_btn)
-                            .addComponent(Bevetel_btn))
-                        .addGap(27, 27, 27))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(CompareButton))
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
-                        .addGap(199, 199, 199))))
+                        .addGap(176, 176, 176)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Bevetel_btn)
+                            .addComponent(Adoek_btn))
+                        .addGap(27, 27, 27))
+                    .addComponent(DiagButton, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
         pack();
@@ -498,6 +524,53 @@ public class Menu1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Bevetel_btnActionPerformed
 
+    private void DiagButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiagButtonActionPerformed
+        // TODO add your handling code here:
+        Integer orszag1 = ComboBoxA.getSelectedIndex();
+        Integer orszag2 = ComboBoxB.getSelectedIndex();
+        CategoryTableXYDataset dataset = new CategoryTableXYDataset();
+        //OrszágA
+        dataset.add(1.0,myList.get(orszag1)[0],"Társasági adó");
+        dataset.add(1.0,myList.get(orszag1)[1],"Maximális jövedelem adó");
+        dataset.add(1.0,myList.get(orszag1)[2],"Normál ÁFA kulcs");
+        dataset.add(1.0,myList.get(orszag1)[3],"Személyi jövedelemadó");
+        dataset.add(1.0,myList.get(orszag1)[4],"Nyugdíjjárulék");
+        dataset.add(1.0,myList.get(orszag1)[5],"Egészségbiztosítási és munkaerőpiaci járulék");
+        dataset.add(1.0,myList.get(orszag1)[6],"SZOCHO");
+        dataset.add(1.0,myList.get(orszag1)[7],"Szakképzési hozzájárulás");
+        //OrszágB
+        dataset.add(2.5,myList.get(orszag2)[0],"Társasági adó");
+        dataset.add(2.5,myList.get(orszag2)[1],"Maximális jövedelem adó");
+        dataset.add(2.5,myList.get(orszag2)[2],"Normál ÁFA kulcs");
+        dataset.add(2.5,myList.get(orszag2)[3],"Személyi jövedelemadó");
+        dataset.add(2.5,myList.get(orszag2)[4],"Nyugdíjjárulék");
+        dataset.add(2.5,myList.get(orszag2)[5],"Egészségbiztosítási és munkaerőpiaci járulék");
+        dataset.add(2.5,myList.get(orszag2)[6],"SZOCHO");
+        dataset.add(2.5,myList.get(orszag2)[7],"Szakképzési hozzájárulás");
+        XYPlot plot = new XYPlot(dataset,new NumberAxis(ComboBoxA.getItemAt(orszag1)+'-'+ComboBoxB.getItemAt(orszag2)), new NumberAxis("%"),new StackedXYBarRenderer());
+        JFreeChart chart = new JFreeChart(plot);
+        ChartPanel chartPanel = new ChartPanel(chart);
+        JFrame frame = new JFrame("Adókat összehasonlító diagramm");
+        frame.setContentPane(chartPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLayout(null);
+        JButton ki = new JButton();
+        ki.setText("V");
+        ki.setFont(new Font("Arial", Font.PLAIN, 10));
+        ki.setBounds(0, 330, 15, 15);
+        ki.setSize(40,40);
+        ki.setLayout(null);
+        frame.add(ki);
+        ki.addActionListener(new ActionListener() {
+            @Override public void actionPerformed (ActionEvent e) {
+                frame.dispose();
+            }
+        });
+        ki.setVisible(true);
+        frame.setVisible(true);
+    }//GEN-LAST:event_DiagButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -547,6 +620,7 @@ public class Menu1 extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboBoxA;
     private javax.swing.JComboBox<String> ComboBoxB;
     private javax.swing.JButton CompareButton;
+    private javax.swing.JButton DiagButton;
     private javax.swing.JButton ExitButton;
     private javax.swing.JTable TableAdok;
     private javax.swing.JTable Tableadatok;
