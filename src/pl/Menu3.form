@@ -28,13 +28,17 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="211" max="32767" attributes="0"/>
+                      <Component id="CountryBox" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="72" max="32767" attributes="0"/>
                       <Component id="ExitButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="BackButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="HasonlitButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -47,11 +51,13 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ExitButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CountryBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="BackButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="225" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="HasonlitButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="184" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -73,10 +79,32 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BackButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JComboBox" name="CountryBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Placeholder for Load"/>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="8">
+            <StringItem index="0" value="T&#xe1;rsas&#xe1;gi ad&#xf3;"/>
+            <StringItem index="1" value="Maxim&#xe1;lis j&#xf6;vedelem ad&#xf3;"/>
+            <StringItem index="2" value="Norm&#xe1;l &#xc1;FA kulcs"/>
+            <StringItem index="3" value="SZJA"/>
+            <StringItem index="4" value="Nyugd&#xed;jj&#xe1;rul&#xe9;k"/>
+            <StringItem index="5" value="Eg&#xe9;szs&#xe9;gbiztos&#xed;t&#xe1;si &#xe9;s munkaer&#x151;piaci j&#xe1;rul&#xe9;k"/>
+            <StringItem index="6" value="SZOCHO"/>
+            <StringItem index="7" value="Szakk&#xe9;pz&#xe9;si hozz&#xe1;j&#xe1;rul&#xe1;s"/>
+          </StringArray>
+        </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="HasonlitButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xd6;sszehasonl&#xed;t"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HasonlitButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

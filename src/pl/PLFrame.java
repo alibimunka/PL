@@ -167,7 +167,12 @@ public class PLFrame extends javax.swing.JFrame {
     private void Menu3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu3ButtonActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Menu3 m3 = new Menu3();
+        Menu3 m3 = null;
+        try {
+            m3 = new Menu3();
+        } catch (IOException ex) {
+            Logger.getLogger(PLFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         m3.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Menu3ButtonActionPerformed

@@ -5,17 +5,45 @@
  */
 package pl;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.ui.RefineryUtilities;
+import static pl.PieChart.dataset;
+
 /**
  *
  * @author Alibimunka
  */
 public class Menu3 extends javax.swing.JFrame {
 
+    ArrayList<Integer[]> INTList = new ArrayList<>();
+    ArrayList<String> STRList = new ArrayList<>();
+    
     /**
      * Creates new form Menu3
      */
-    public Menu3() {
+    public Menu3() throws FileNotFoundException, IOException {
         initComponents();
+        File file = new File("be.txt"); 
+        BufferedReader br = new BufferedReader(new FileReader(file)); 
+        String s;
+        while ((s = br.readLine()) != null){
+            String[] parts = s.split("\t");
+            STRList.add(parts[0]);
+            Integer[] szamok = new Integer[8];
+            for (Integer i=0;i<8;i++){
+                szamok[i]=Integer.parseInt(parts[i+1]);
+            }
+            INTList.add(szamok);
+        }
+        br.close();
     }
 
     /**
@@ -29,7 +57,8 @@ public class Menu3 extends javax.swing.JFrame {
 
         ExitButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        CountryBox = new javax.swing.JComboBox<>();
+        HasonlitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Load");
@@ -48,7 +77,14 @@ public class Menu3 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Placeholder for Load");
+        CountryBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Társasági adó", "Maximális jövedelem adó", "Normál ÁFA kulcs", "SZJA", "Nyugdíjjárulék", "Egészségbiztosítási és munkaerőpiaci járulék", "SZOCHO", "Szakképzési hozzájárulás" }));
+
+        HasonlitButton.setText("Összehasonlít");
+        HasonlitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HasonlitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,12 +94,15 @@ public class Menu3 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
+                        .addComponent(CountryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                         .addComponent(ExitButton))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(BackButton)))
+                        .addComponent(BackButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(HasonlitButton)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -72,10 +111,12 @@ public class Menu3 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ExitButton)
-                    .addComponent(jLabel1))
+                    .addComponent(CountryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(BackButton)
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(HasonlitButton)
+                .addContainerGap(184, Short.MAX_VALUE))
         );
 
         pack();
@@ -93,6 +134,18 @@ public class Menu3 extends javax.swing.JFrame {
         pl.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackButtonActionPerformed
+
+    private void HasonlitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HasonlitButtonActionPerformed
+        Integer select = CountryBox.getSelectedIndex();
+        dataset = new DefaultPieDataset( );
+        for (Integer i=0;i<8;i++){
+            dataset.setValue( STRList.get(i) , new Double( INTList.get(i)[select] ) ); 
+        }
+        PieChart demo = new PieChart(CountryBox.getItemAt(CountryBox.getSelectedIndex()),dataset); 
+        demo.setSize( 560 , 367 );
+        RefineryUtilities.centerFrameOnScreen( demo );    
+        demo.setVisible( true ); 
+    }//GEN-LAST:event_HasonlitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,14 +177,19 @@ public class Menu3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu3().setVisible(true);
+                try {
+                    new Menu3().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Menu3.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
+    private javax.swing.JComboBox<String> CountryBox;
     private javax.swing.JButton ExitButton;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton HasonlitButton;
     // End of variables declaration//GEN-END:variables
 }
