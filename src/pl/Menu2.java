@@ -46,8 +46,6 @@ public class Menu2 extends javax.swing.JFrame {
         ButtonKiiras = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         KiirasLabel = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        Tableadatok = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -80,10 +78,17 @@ public class Menu2 extends javax.swing.JFrame {
                 {"Nyugdíjjárulék", ""},
                 {"Egészségbiztosítási és munkaerőpiaci járulék", ""},
                 {"Szociális hozzájárulási adó", ""},
-                {"Szakképzési hozzájárulási adó", ""}
+                {"Szakképzési hozzájárulási adó", ""},
+                {"Keresőképes lakosok száma(MFt)", null},
+                {"Keresőképes lakosok átlagkeresete", null},
+                {"Társasági adót fizető vállalkozások átlagos adózás előtti eredménye (MFt)", null},
+                {"Jövedéki adóból származó bevétel (MFt)", null},
+                {"27%-os ÁFÁ-ból származó bevétel(MFt)", null},
+                {"18%-os ÁFÁ-ból származó bevétel(tej, tejtermékek,pékáru,cukrászsütemény,szolgáltatás,stb.)(MFt)", null},
+                {"5%-os ÁFÁ-ból származó bevétel(humán gyógyszerek,napilapok,könyv,folyóirat,szolgáltatás,stb)(MFt)", null}
             },
             new String [] {
-                "Adók", "Értékek"
+                "Adók, adatok", "Értékek"
             }
         ) {
             Class[] types = new Class [] {
@@ -110,91 +115,53 @@ public class Menu2 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(Table_ujadorendszer);
         Table_ujadorendszer.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         if (Table_ujadorendszer.getColumnModel().getColumnCount() > 0) {
-            Table_ujadorendszer.getColumnModel().getColumn(0).setMaxWidth(300);
-            Table_ujadorendszer.getColumnModel().getColumn(1).setMaxWidth(150);
+            Table_ujadorendszer.getColumnModel().getColumn(0).setMaxWidth(600);
+            Table_ujadorendszer.getColumnModel().getColumn(1).setMaxWidth(300);
         }
 
-        ButtonKiiras.setText("Kiírás");
+        ButtonKiiras.setText("Felvitel");
         ButtonKiiras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonKiirasActionPerformed(evt);
             }
         });
 
-        Tableadatok.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Keresőképes lakosok száma(MFt)", null, null},
-                {"Keresőképes lakosok átlagkeresete (MrdFt)", null, null},
-                {"Társasági adót fizető vállalkozások átlagos adózás előtti eredménye (MrdFt)", null, null},
-                {"Jövedéki adóból származó bevétel (MrdFt)", null, null},
-                {"27%-os ÁFÁ-ból származó bevétel(MrdFt)", null, null},
-                {"18%-os ÁFÁ-ból származó bevétel(tej, terjtermékek,pékáru,cukrászsütemény,szolgáltatás,stb.)(MrdFt)", null, null},
-                {"5%-os ÁFÁ-ból származó bevétel(humán gyógyszerek, napilapok,könyv,folyóirat,szolgáltatás,stb)(MrdFt)", null, null}
-            },
-            new String [] {
-                "Adatok", "Adórendszer1", "Adórendszer2"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, true, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(Tableadatok);
-
-        jLabel4.setText("Az adatok %-ban értetendők!");
+        jLabel4.setText("Az adók, járulékok, ÁFA %-ban értetendők!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(394, 394, 394)
                         .addComponent(ExitButton))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ButtonKiiras)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(81, 81, 81)
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(KiirasLabel)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1103, Short.MAX_VALUE)
+                        .addComponent(BackButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(jLabel2))
+                                .addGap(158, 158, 158)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(44, 44, 44)
+                                .addComponent(KiirasLabel))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(205, 205, 205)
+                                .addGap(107, 107, 107)
                                 .addComponent(jLabel4)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BackButton)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 140, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(373, 373, 373))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119))))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonKiiras, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(535, 535, 535))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,21 +179,22 @@ public class Menu2 extends javax.swing.JFrame {
                                 .addComponent(jLabel2))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jLabel4)))
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(KiirasLabel))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                .addComponent(ButtonKiiras)
-                .addGap(42, 42, 42))
+                        .addGap(269, 269, 269)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(KiirasLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(77, 77, 77)))
+                .addComponent(ButtonKiiras, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78))
         );
 
         pack();
@@ -264,9 +232,9 @@ public class Menu2 extends javax.swing.JFrame {
                 }
             }
         });
-        for (Integer i=0;i<9;i++){
+        for (Integer i=0;i<16;i++){
             adatok+=Table_ujadorendszer.getValueAt(i, 1);
-            if (i<8) adatok+="\t";
+            if (i<15) adatok+="\t";
         }
         try {
             Files.write(Paths.get("be.txt"), adatok.getBytes(), StandardOpenOption.APPEND);
@@ -317,12 +285,10 @@ public class Menu2 extends javax.swing.JFrame {
     private javax.swing.JButton ExitButton;
     private javax.swing.JLabel KiirasLabel;
     private javax.swing.JTable Table_ujadorendszer;
-    private javax.swing.JTable Tableadatok;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

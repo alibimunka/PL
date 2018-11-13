@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="&#xd6;sszehasonl&#xed;t&#xe1;s"/>
+    <Property name="title" type="java.lang.String" value="Ad&#xf3;rendszerek &#xf6;sszehasonl&#xed;t&#xe1;sa"/>
     <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
       <Rectangle value="[0, 0, 0, 0]"/>
     </Property>
@@ -31,70 +31,33 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="ComboBoxA" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
-              <Component id="ComboBoxB" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
-                      <Component id="Adoek_btn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="Bevetel_btn" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="513" max="-2" attributes="0"/>
                       <Component id="CompareButton" min="-2" max="-2" attributes="0"/>
                   </Group>
-              </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="BackButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
-                              <Component id="ExitButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jScrollPane1" min="-2" pref="604" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="441" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                       <Component id="jTextField1" min="-2" pref="56" max="-2" attributes="0"/>
                       <Component id="jTextField3" min="-2" pref="55" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jTextField5" alignment="1" min="-2" pref="56" max="-2" attributes="0"/>
                           <Component id="jTextField8" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
@@ -108,7 +71,7 @@
                   <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="86" max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -138,20 +101,51 @@
                       <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="520" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="BackButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
+                      <Component id="ExitButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="686" max="32767" attributes="0"/>
+              <Component id="ComboBoxA" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+              <Component id="ComboBoxB" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="950" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="1052" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="462" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="461" max="-2" attributes="0"/>
                       <Component id="DiagButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
+              <Component id="Adoek_btn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="Bevetel_btn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="354" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -172,20 +166,17 @@
                   <Component id="ComboBoxA" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="175" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="143" max="-2" attributes="0"/>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="287" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -193,6 +184,7 @@
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -200,7 +192,6 @@
                           <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -210,28 +201,22 @@
                           <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="CompareButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Bevetel_btn" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Adoek_btn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Bevetel_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Adoek_btn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="DiagButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                  </Group>
               </Group>
+              <Component id="DiagButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -259,6 +244,9 @@
           <StringArray count="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComboBoxAActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -288,8 +276,8 @@
               </Border>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="9">
-                <Column editable="false" title="Ad&#xf3;k" type="java.lang.String">
+              <Table columnCount="4" rowCount="16">
+                <Column editable="true" title="&#xc9;rt&#xe9;kek" type="java.lang.String">
                   <Data value="Orsz&#xe1;g"/>
                   <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;"/>
                   <Data value="Maxim&#xe1;lis j&#xf6;vedelem ad&#xf3;"/>
@@ -299,6 +287,13 @@
                   <Data value="Eg&#xe9;szs&#xe9;gbizots&#xed;t&#xe1;si &#xe9;s munkaer&#x151;piaci j&#xe1;rul&#xe9;k"/>
                   <Data value="Szoci&#xe1;lis hozz&#xe1;j&#xe1;rul&#xe1;si ad&#xf3;"/>
                   <Data value="Szakk&#xe9;pz&#xe9;si hozz&#xe1;j&#xe1;rul&#xe1;s"/>
+                  <Data value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma(MFt)"/>
+                  <Data value="Keres&#x151;k&#xe9;pes lakosok &#xe1;tlagkeresete"/>
+                  <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;t fizet&#x151; v&#xe1;llalkoz&#xe1;sok &#xe1;tlagos ad&#xf3;z&#xe1;s el&#x151;tti eredm&#xe9;nye (MFt)"/>
+                  <Data value="J&#xf6;ved&#xe9;ki ad&#xf3;b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MFt)"/>
+                  <Data value="27%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(MFt)"/>
+                  <Data value="18%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(tej, terjterm&#xe9;kek,p&#xe9;k&#xe1;ru,cukr&#xe1;szs&#xfc;tem&#xe9;ny,szolg&#xe1;ltat&#xe1;s,stb.)(MFt)"/>
+                  <Data value="5%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(hum&#xe1;n gy&#xf3;gyszerek, napilapok,k&#xf6;nyv,foly&#xf3;irat,szolg&#xe1;ltat&#xe1;s,stb)(MFt)"/>
                 </Column>
                 <Column editable="true" title="Ad&#xf3;rendszer1" type="java.lang.Integer"/>
                 <Column editable="false" title="" type="java.lang.String"/>
@@ -309,7 +304,7 @@
             <Property name="alignmentY" type="float" value="0.7"/>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="450" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="600" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
@@ -426,70 +421,9 @@
         <Property name="text" type="java.lang.String" value="%"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTable" name="Tableadatok">
-          <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="7">
-                <Column editable="false" title="Adatok" type="java.lang.String">
-                  <Data value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma(MFt)"/>
-                  <Data value="Keres&#x151;k&#xe9;pes lakosok &#xe1;tlagkeresete (MrdFt)"/>
-                  <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;t fizet&#x151; v&#xe1;llalkoz&#xe1;sok &#xe1;tlagos ad&#xf3;z&#xe1;s el&#x151;tti eredm&#xe9;nye (MrdFt)"/>
-                  <Data value="J&#xf6;ved&#xe9;ki ad&#xf3;b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MrdFt)"/>
-                  <Data value="27%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(MrdFt)"/>
-                  <Data value="18%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(tej, terjterm&#xe9;kek,p&#xe9;k&#xe1;ru,cukr&#xe1;szs&#xfc;tem&#xe9;ny,szolg&#xe1;ltat&#xe1;s,stb.)(MrdFt)"/>
-                  <Data value="5%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(hum&#xe1;n gy&#xf3;gyszerek, napilapok,k&#xf6;nyv,foly&#xf3;irat,szolg&#xe1;ltat&#xe1;s,stb)(MrdFt)"/>
-                </Column>
-                <Column editable="true" title="Ad&#xf3;rendszer1" type="java.lang.Integer"/>
-                <Column editable="false" title="" type="java.lang.String"/>
-                <Column editable="true" title="Ad&#xf3;rendszer2" type="java.lang.Integer"/>
-              </Table>
-            </Property>
-            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-              <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="600" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-              </TableColumnModel>
-            </Property>
-            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-            </Property>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="jLabel12">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="EZEKET T&#xc1;ROLNI K&#xc9;NE VALAHOGY! VAGY F&#xc1;JLB&#xd3;L KIIRATNI A T&#xc1;BL&#xc1;ZATBA"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xd6;sszes bev&#xe9;tel:"/>
+        <Property name="text" type="java.lang.String" value="Ad&#xf3;rendszerenk&#xe9;nti &#xf6;sszes bev&#xe9;tel:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField8">
@@ -498,12 +432,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Mrd Ft"/>
+        <Property name="text" type="java.lang.String" value="M Ft"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel15">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Mrd Ft"/>
+        <Property name="text" type="java.lang.String" value="M Ft"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Adoek_btn">
@@ -521,7 +455,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="DiagButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Oszlop Diagramm &#xf6;sszehasonl&#xed;t"/>
+        <Property name="text" type="java.lang.String" value="Ad&#xf3;kat &#xf6;sszehasonl&#xed;t&#xf3; diagram"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DiagButtonActionPerformed"/>

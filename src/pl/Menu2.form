@@ -25,55 +25,43 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="394" max="-2" attributes="0"/>
                       <Component id="ExitButton" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="1103" max="32767" attributes="0"/>
+                      <Component id="BackButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ButtonKiiras" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="902" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Component id="KiirasLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="BackButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="140" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="373" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jScrollPane2" min="-2" pref="950" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="ButtonKiiras" min="-2" pref="88" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="535" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,23 +87,26 @@
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="KiirasLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="287" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="175" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="KiirasLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" pref="143" max="-2" attributes="0"/>
-              <EmptySpace pref="78" max="32767" attributes="0"/>
-              <Component id="ButtonKiiras" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="ButtonKiiras" min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -155,8 +146,8 @@
         <Component class="javax.swing.JTable" name="Table_ujadorendszer">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="2" rowCount="9">
-                <Column editable="false" title="Ad&#xf3;k" type="java.lang.String">
+              <Table columnCount="2" rowCount="16">
+                <Column editable="false" title="Ad&#xf3;k, adatok" type="java.lang.String">
                   <Data value="Orsz&#xe1;g"/>
                   <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;"/>
                   <Data value="Maxim&#xe1;lis j&#xf6;vedelemad&#xf3;"/>
@@ -166,6 +157,13 @@
                   <Data value="Eg&#xe9;szs&#xe9;gbiztos&#xed;t&#xe1;si &#xe9;s munkaer&#x151;piaci j&#xe1;rul&#xe9;k"/>
                   <Data value="Szoci&#xe1;lis hozz&#xe1;j&#xe1;rul&#xe1;si ad&#xf3;"/>
                   <Data value="Szakk&#xe9;pz&#xe9;si hozz&#xe1;j&#xe1;rul&#xe1;si ad&#xf3;"/>
+                  <Data value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma(MFt)"/>
+                  <Data value="Keres&#x151;k&#xe9;pes lakosok &#xe1;tlagkeresete"/>
+                  <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;t fizet&#x151; v&#xe1;llalkoz&#xe1;sok &#xe1;tlagos ad&#xf3;z&#xe1;s el&#x151;tti eredm&#xe9;nye (MFt)"/>
+                  <Data value="J&#xf6;ved&#xe9;ki ad&#xf3;b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MFt)"/>
+                  <Data value="27%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(MFt)"/>
+                  <Data value="18%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(tej, tejterm&#xe9;kek,p&#xe9;k&#xe1;ru,cukr&#xe1;szs&#xfc;tem&#xe9;ny,szolg&#xe1;ltat&#xe1;s,stb.)(MFt)"/>
+                  <Data value="5%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(hum&#xe1;n gy&#xf3;gyszerek,napilapok,k&#xf6;nyv,foly&#xf3;irat,szolg&#xe1;ltat&#xe1;s,stb)(MFt)"/>
                 </Column>
                 <Column editable="true" title="&#xc9;rt&#xe9;kek" type="java.lang.String">
                   <Data value=""/>
@@ -177,17 +175,24 @@
                   <Data value=""/>
                   <Data value=""/>
                   <Data value=""/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
                 </Column>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="2">
-                <Column maxWidth="300" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="600" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="150" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="300" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
@@ -209,7 +214,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="ButtonKiiras">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ki&#xed;r&#xe1;s"/>
+        <Property name="text" type="java.lang.String" value="Felvitel"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonKiirasActionPerformed"/>
@@ -219,40 +224,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="KiirasLabel">
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTable" name="Tableadatok">
-          <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="3" rowCount="7">
-                <Column editable="false" title="Adatok" type="java.lang.String">
-                  <Data value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma(MFt)"/>
-                  <Data value="Keres&#x151;k&#xe9;pes lakosok &#xe1;tlagkeresete (MrdFt)"/>
-                  <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;t fizet&#x151; v&#xe1;llalkoz&#xe1;sok &#xe1;tlagos ad&#xf3;z&#xe1;s el&#x151;tti eredm&#xe9;nye (MrdFt)"/>
-                  <Data value="J&#xf6;ved&#xe9;ki ad&#xf3;b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MrdFt)"/>
-                  <Data value="27%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(MrdFt)"/>
-                  <Data value="18%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(tej, terjterm&#xe9;kek,p&#xe9;k&#xe1;ru,cukr&#xe1;szs&#xfc;tem&#xe9;ny,szolg&#xe1;ltat&#xe1;s,stb.)(MrdFt)"/>
-                  <Data value="5%-os &#xc1;F&#xc1;-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel(hum&#xe1;n gy&#xf3;gyszerek, napilapok,k&#xf6;nyv,foly&#xf3;irat,szolg&#xe1;ltat&#xe1;s,stb)(MrdFt)"/>
-                </Column>
-                <Column editable="true" title="Ad&#xf3;rendszer1" type="java.lang.Integer"/>
-                <Column editable="true" title="Ad&#xf3;rendszer2" type="java.lang.Integer"/>
-              </Table>
-            </Property>
-            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-            </Property>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Az adatok %-ban &#xe9;rtetend&#x151;k!"/>
+        <Property name="text" type="java.lang.String" value="Az ad&#xf3;k, j&#xe1;rul&#xe9;kok, &#xc1;FA %-ban &#xe9;rtetend&#x151;k!"/>
       </Properties>
     </Component>
   </SubComponents>
