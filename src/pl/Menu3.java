@@ -5,6 +5,9 @@
  */
 package pl;
 
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.ui.RefineryUtilities;
 import static pl.PieChart.dataset;
@@ -156,7 +160,22 @@ public class Menu3 extends javax.swing.JFrame {
         }
         PieChart demo = new PieChart(CountryBox.getItemAt(CountryBox.getSelectedIndex()),dataset); 
         demo.setSize( 560 , 367 );
-        RefineryUtilities.centerFrameOnScreen( demo );    
+        demo.setLayout(null);
+        JButton ki = new JButton();
+        ki.setText("Vissza");
+        ki.setFont(new Font("Arial", Font.PLAIN, 12));
+        ki.setBounds(0, 0, 45, 15);
+        ki.setSize(80,40);
+        ki.setLayout(null);
+        demo.add(ki);
+        ki.addActionListener(new ActionListener() {
+            @Override public void actionPerformed (ActionEvent e) {
+                demo.dispose();
+            }
+        });
+        ki.setVisible(true);
+        RefineryUtilities.centerFrameOnScreen( demo );
+//        demo.setDefaultCloseOperation(PieChart.DISPOSE_ON_CLOSE);
         demo.setVisible( true ); 
     }//GEN-LAST:event_HasonlitButtonActionPerformed
 
