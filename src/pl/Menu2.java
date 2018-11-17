@@ -79,7 +79,7 @@ public class Menu2 extends javax.swing.JFrame {
                 {"Egészségbiztosítási és munkaerőpiaci járulék", ""},
                 {"Szociális hozzájárulási adó", ""},
                 {"Szakképzési hozzájárulási adó", ""},
-                {"Keresőképes lakosok száma(MFt)", null},
+                {"Keresőképes lakosok száma(M Fő)", null},
                 {"Keresőképes lakosok átlagkeresete", null},
                 {"Társasági adót fizető vállalkozások átlagos adózás előtti eredménye (MFt)", null},
                 {"Jövedéki adóból származó bevétel (MFt)", null},
@@ -94,16 +94,9 @@ public class Menu2 extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class
             };
-            boolean[] canEdit = new boolean [] {
-                false, true
-            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
         });
         Table_ujadorendszer.setColumnSelectionAllowed(true);

@@ -24,6 +24,7 @@ import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.StackedXYBarRenderer;
 import org.jfree.data.xy.CategoryTableXYDataset;
+//import java.lang.math.BigDecimal;
 
 
 /*
@@ -265,7 +266,13 @@ public class Menu1 extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(520, Short.MAX_VALUE)
+                .addGap(0, 686, Short.MAX_VALUE)
+                .addComponent(ComboBoxA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190)
+                .addComponent(ComboBoxB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(281, 281, 281))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BackButton)
                     .addGroup(layout.createSequentialGroup()
@@ -274,37 +281,44 @@ public class Menu1 extends javax.swing.JFrame {
                         .addComponent(ExitButton)))
                 .addGap(78, 78, 78))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 686, Short.MAX_VALUE)
-                .addComponent(ComboBoxA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190)
-                .addComponent(ComboBoxB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(281, 281, 281))
+                .addGap(248, 248, 248)
+                .addComponent(Adoek_btn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Bevetel_btn)
+                .addGap(257, 257, 257))
             .addGroup(layout.createSequentialGroup()
-                .addGap(254, 254, 254)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Adoek_btn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Bevetel_btn)
-                        .addGap(140, 140, 140))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(62, 62, 62)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(213, 213, 213)
-                                        .addComponent(CompareButton))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(AdoekB, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel11))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel1))
+                                        .addGap(442, 442, 442)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel1)
-                                                    .addComponent(jLabel13)
-                                                    .addComponent(jLabel6))
-                                                .addGap(3, 3, 3)))))
-                                .addGap(88, 88, 88)
+                                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel9))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel8)))))
+                                .addGap(25, 25, 25))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(308, 308, 308)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel6))
+                                .addGap(91, 91, 91)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -315,39 +329,21 @@ public class Menu1 extends javax.swing.JFrame {
                                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(1, 1, 1)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel10)
                                     .addComponent(jLabel7)
-                                    .addComponent(jLabel5)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(161, 161, 161)
-                                .addComponent(DiagButton)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel5))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel14))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(AdoekB, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel9))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel8))))
-                        .addGap(25, 25, 25))
+                        .addGap(495, 495, 495)
+                        .addComponent(DiagButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(539, 539, 539)
+                        .addComponent(CompareButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -367,47 +363,46 @@ public class Menu1 extends javax.swing.JFrame {
                     .addComponent(ComboBoxB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AdoekA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AdoekB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(CompareButton)
+                .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AdoekA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AdoekB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel13))
-                        .addGap(14, 14, 14)
-                        .addComponent(CompareButton)
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Bevetel_btn)
-                            .addComponent(Adoek_btn))
-                        .addGap(7, 7, 7))
+                        .addComponent(Bevetel_btn)
+                        .addGap(39, 39, 39))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(136, 136, 136)))
+                        .addComponent(Adoek_btn)
+                        .addGap(30, 30, 30)))
                 .addComponent(DiagButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -483,13 +478,13 @@ public class Menu1 extends javax.swing.JFrame {
       String ad_ketto =Double.toString(adoek_ketto);
       AdoekB.setText(ad_ketto.substring(0, 4));
       
-      double munkavallalobol1=(myList.get(orszag1)[8]*((myList.get(orszag1)[9])/1000000.00))*(1-(munkavallalo/100.00));
-       
-      double munkaltatobol1=((((myList.get(orszag1)[8]*myList.get(orszag1)[9])/1000000.00)*((munkaltato/100.00)+1))-(myList.get(orszag1)[8]*(myList.get(orszag1)[9])/1000000.00));
+      double munkavallalobol1=((myList.get(orszag1)[8]*((myList.get(orszag1)[9])/1000000.00))*(1-(munkavallalo/100.00)))*12; // EZT KÉNE MEGNÉZNI SZEBI
+   
+      double munkaltatobol1=((((myList.get(orszag1)[8]*myList.get(orszag1)[9])/1000000.00)*((munkaltato/100.00)+1))-(myList.get(orszag1)[8]*(myList.get(orszag1)[9])/1000000.00))*12; //EZT IS
       
-      double munkavallalobol2=(myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*(1-(munkaval/100.00));
+      double munkavallalobol2=((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*(1-(munkaval/100.00)))*12; //EZT IS
        
-      double munkaltatobol2=(((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*((munkaltat/100.00)+1))-(myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00));
+      double munkaltatobol2=(((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*((munkaltat/100.00)+1))-(myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00))*12;//EZT IS
       
      double BevetelOrszag1=munkavallalobol1+munkaltatobol1+(myList.get(orszag1)[10]*(myList.get(orszag1)[0]/100.00))+myList.get(orszag1)[11]+myList.get(orszag1)[12]+myList.get(orszag1)[13]+myList.get(orszag1)[14];
      String b_double =Double.toString(BevetelOrszag1);
@@ -517,15 +512,48 @@ public class Menu1 extends javax.swing.JFrame {
         Integer orszag2 = ComboBoxB.getSelectedIndex();
         CategoryTableXYDataset dataset = new CategoryTableXYDataset();
         //OrszágA
-        int orszagAbevetellakos=myList.get(orszag1)[11]; // IDE KELL BERNI AZ ELSŐ ORSZÁG BEVÉTELE LAKOSOKBÓL
-        int orszagAbevetelvallalt=myList.get(orszag1)[9]; // IDE KELL BERNI AZ ELSŐ ORSZÁG BEVÉTELE VÁLLALATOKBÓL
-        dataset.add(1.0,orszagAbevetellakos,"Lakosságon beszedett adó");
-        dataset.add(1.0,orszagAbevetelvallalt,"Vállalatokon beszedett adó");
+     
+      Integer munkavallalo= myList.get(orszag1)[3]+myList.get(orszag1)[4]+myList.get(orszag1)[5];
+      Integer munkaltato= myList.get(orszag1)[6]+myList.get(orszag1)[7];
+
+      double munkaltatobol=((((myList.get(orszag1)[8]*myList.get(orszag1)[9])/1000000.00)*((munkaltato/100.00)+1))-(myList.get(orszag1)[8]*(myList.get(orszag1)[9])/1000000.00))*12; //UGYANAZ VAN IT IS
+      double munkavallalobol =((myList.get(orszag1)[8]*((myList.get(orszag1)[9])/1000000.00))*(1-(munkavallalo/100.00)))*12; //ITT IS
+      
+      double orszagAbevetellakos=(munkaltatobol+munkavallalobol);
+      double orszagAbevetelvallalt=myList.get(orszag1)[10]*(myList.get(orszag1)[0]/100.00);
+      int jovedekiadoA=myList.get(orszag1)[13];
+      
+      int rendesAfaA=myList.get(orszag1)[12];
+      int kisebbAfaA=myList.get(orszag1)[13];
+      int kicsiAfaA=myList.get(orszag1)[14];
+      
+      
+      dataset.add(1.0,orszagAbevetellakos,"Munkabérekből származó bevétel");
+      dataset.add(1.0,orszagAbevetelvallalt,"Társasági adóból származó bevétel");
+      dataset.add(1.0,jovedekiadoA,"Jövedéki adóból származó bevétel");
+      dataset.add(1.0,rendesAfaA,"27%-os ÁFÁ-ból származó bevétel");
+      dataset.add(1.0,kisebbAfaA,"18%-os ÁFÁ-ból származó bevétel");
+      dataset.add(1.0,kicsiAfaA,"5%-os ÁFÁ-ból származó bevétel");
+      
         //OrszágB
-        int orszagBbevetellakos=myList.get(orszag2)[11]; // IDE KELL BERNI A MÁSODIK ORSZÁG BEVÉTELE LAKOSOKBÓL
-        int orszagBbevetelvallalt=myList.get(orszag2)[9]; // IDE KELL BERNI A MÁSODIK ORSZÁG BEVÉTELE VÁLLALATOKBÓL
-        dataset.add(2.5,orszagBbevetellakos,"Lakosságon beszedett adó");
-        dataset.add(2.5,orszagBbevetelvallalt,"Vállalatokon beszedett adó");
+        Integer munkaval= myList.get(orszag2)[3]+myList.get(orszag2)[4]+myList.get(orszag2)[5];
+        Integer munkaltat= myList.get(orszag2)[6]+myList.get(orszag2)[7];
+        
+        double munkaltatobol2=(((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*((munkaltat/100.00)+1))-(myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00))*12; //ITT IS
+        double orszagBbevetellakos=((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*(1-(munkaval/100.00)))*12+munkaltatobol2; //ITT IS
+        double orszagBbevetelvallalt=myList.get(orszag2)[10]*(myList.get(orszag2)[0]/100.00);
+        int jovedekiadoB=myList.get(orszag2)[13];
+        int rendesAfaB=myList.get(orszag2)[12];
+        int kisebbAfaB=myList.get(orszag2)[13];
+        int kicsiAfaB=myList.get(orszag2)[14];
+        
+        dataset.add(2.5,orszagBbevetellakos,"Munkabérekből származó bevétel");
+        dataset.add(2.5,orszagBbevetelvallalt,"Társasági adóból származó bevétel");
+        dataset.add(2.5,jovedekiadoB,"Jövedéki adóból származó bevétel");
+        dataset.add(2.5,rendesAfaB,"27%-os ÁFÁ-ból származó bevétel");
+        dataset.add(2.5,kisebbAfaB,"18%-os ÁFÁ-ból származó bevétel");
+        dataset.add(2.5,kicsiAfaB,"5%-os ÁFÁ-ból származó bevétel");
+        
         XYPlot plot = new XYPlot(dataset,new NumberAxis(ComboBoxA.getItemAt(orszag1)+'-'+ComboBoxB.getItemAt(orszag2)), new NumberAxis("%"),new StackedXYBarRenderer());
         JFreeChart chart = new JFreeChart(plot);
         ChartPanel chartPanel = new ChartPanel(chart);

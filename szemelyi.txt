@@ -1,4 +1,4 @@
-Magyarorszag	10	9
+Magyarorszag	15	10	9
 Ausztria	12	10	5
 Belgium	13	7	10
 Nemetorszag	16	10	12

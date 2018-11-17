@@ -147,7 +147,7 @@
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="2" rowCount="16">
-                <Column editable="false" title="Ad&#xf3;k, adatok" type="java.lang.String">
+                <Column editable="true" title="Ad&#xf3;k, adatok" type="java.lang.String">
                   <Data value="Orsz&#xe1;g"/>
                   <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;"/>
                   <Data value="Maxim&#xe1;lis j&#xf6;vedelemad&#xf3;"/>
@@ -157,7 +157,7 @@
                   <Data value="Eg&#xe9;szs&#xe9;gbiztos&#xed;t&#xe1;si &#xe9;s munkaer&#x151;piaci j&#xe1;rul&#xe9;k"/>
                   <Data value="Szoci&#xe1;lis hozz&#xe1;j&#xe1;rul&#xe1;si ad&#xf3;"/>
                   <Data value="Szakk&#xe9;pz&#xe9;si hozz&#xe1;j&#xe1;rul&#xe1;si ad&#xf3;"/>
-                  <Data value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma(MFt)"/>
+                  <Data value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma(M F&#x151;)"/>
                   <Data value="Keres&#x151;k&#xe9;pes lakosok &#xe1;tlagkeresete"/>
                   <Data value="T&#xe1;rsas&#xe1;gi ad&#xf3;t fizet&#x151; v&#xe1;llalkoz&#xe1;sok &#xe1;tlagos ad&#xf3;z&#xe1;s el&#x151;tti eredm&#xe9;nye (MFt)"/>
                   <Data value="J&#xf6;ved&#xe9;ki ad&#xf3;b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MFt)"/>
