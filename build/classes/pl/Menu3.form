@@ -27,10 +27,14 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="135" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="ExitButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="BackButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="CountryBox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                              <Component id="BackButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
@@ -40,17 +44,11 @@
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="CountryBox" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                                      <Component id="HasonlitButton" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
+                              <Component id="HasonlitButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="54" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="39" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -65,10 +63,11 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="BackButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="CountryBox" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="117" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BackButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CountryBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="160" max="32767" attributes="0"/>
               <Component id="HasonlitButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
           </Group>
@@ -95,7 +94,7 @@
     <Component class="javax.swing.JComboBox" name="CountryBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="8">
+          <StringArray count="13">
             <StringItem index="0" value="T&#xe1;rsas&#xe1;gi ad&#xf3;"/>
             <StringItem index="1" value="Maxim&#xe1;lis j&#xf6;vedelem ad&#xf3;"/>
             <StringItem index="2" value="Norm&#xe1;l &#xc1;FA kulcs"/>
@@ -104,6 +103,11 @@
             <StringItem index="5" value="Eg&#xe9;szs&#xe9;gbiztos&#xed;t&#xe1;si &#xe9;s munkaer&#x151;piaci j&#xe1;rul&#xe9;k"/>
             <StringItem index="6" value="SZOCHO"/>
             <StringItem index="7" value="Szakk&#xe9;pz&#xe9;si hozz&#xe1;j&#xe1;rul&#xe1;s"/>
+            <StringItem index="8" value="Keres&#x151;k&#xe9;pes lakosok sz&#xe1;ma (Mf&#x151;)"/>
+            <StringItem index="9" value="Keres&#x151;k&#xe9;pes lakosok &#xe1;tlagkeresete (Ft)"/>
+            <StringItem index="10" value="T&#xe1;rsas&#xe1;fi ad&#xf3;t fizet&#x151; v&#xe1;llalkoz&#xe1;sok &#xf6;sszes ad&#xf3;z&#xe1;s el&#x151;tti eredm&#xe9;nye (MFt)"/>
+            <StringItem index="11" value="J&#xf6;ved&#xe9;ki ad&#xf3;b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MFt)"/>
+            <StringItem index="12" value="&#xc1;FA-b&#xf3;l sz&#xe1;rmaz&#xf3; bev&#xe9;tel (MFt)"/>
           </StringArray>
         </Property>
       </Properties>
@@ -124,7 +128,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="15" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="V&#xe1;lassza ki azt az ad&#xf3;t, ami alapj&#xe1;n &#xf6;ssze szeretn&#xe9; hasonl&#xed;tani az orsz&#xe1;gokat!"/>
+        <Property name="text" type="java.lang.String" value="V&#xe1;lassza ki azt az adatot, ami alapj&#xe1;n &#xf6;ssze szeretn&#xe9; hasonl&#xed;tani az orsz&#xe1;gokat!"/>
       </Properties>
     </Component>
   </SubComponents>

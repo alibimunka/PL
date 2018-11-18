@@ -81,11 +81,9 @@ public class Menu2 extends javax.swing.JFrame {
                 {"Szakképzési hozzájárulási adó", ""},
                 {"Keresőképes lakosok száma(M Fő)", null},
                 {"Keresőképes lakosok átlagkeresete", null},
-                {"Társasági adót fizető vállalkozások átlagos adózás előtti eredménye (MFt)", null},
+                {"Társasági adót fizető vállalkozások összes adózás előtti eredménye (MFt)", null},
                 {"Jövedéki adóból származó bevétel (MFt)", null},
-                {"27%-os ÁFÁ-ból származó bevétel(MFt)", null},
-                {"18%-os ÁFÁ-ból származó bevétel(tej, tejtermékek,pékáru,cukrászsütemény,szolgáltatás,stb.)(MFt)", null},
-                {"5%-os ÁFÁ-ból származó bevétel(humán gyógyszerek,napilapok,könyv,folyóirat,szolgáltatás,stb)(MFt)", null}
+                {"ÁFÁ-ból származó bevétel(MFt)", null}
             },
             new String [] {
                 "Adók, adatok", "Értékek"
@@ -135,7 +133,7 @@ public class Menu2 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1103, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BackButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +147,7 @@ public class Menu2 extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(107, 107, 107)
                                 .addComponent(jLabel4)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 240, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -181,11 +179,11 @@ public class Menu2 extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(KiirasLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(102, 102, 102)))
                 .addComponent(ButtonKiiras, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78))
         );
@@ -225,9 +223,9 @@ public class Menu2 extends javax.swing.JFrame {
                 }
             }
         });
-        for (Integer i=0;i<16;i++){
+        for (Integer i=0;i<14;i++){
             adatok+=Table_ujadorendszer.getValueAt(i, 1);
-            if (i<15) adatok+="\t";
+            if (i<13) adatok+="\t";
         }
         try {
             Files.write(Paths.get("be.txt"), adatok.getBytes(), StandardOpenOption.APPEND);

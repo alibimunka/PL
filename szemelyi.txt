@@ -1,3 +1,4 @@
+//Ország	Társasági adó	Maximális jövedelem adó	Normál ÁFA kulcs
 Magyarorszag	15	10	9
 Ausztria	12	10	5
 Belgium	13	7	10

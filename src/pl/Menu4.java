@@ -38,7 +38,7 @@ public class Menu4 extends javax.swing.JFrame {
         initComponents();
         File file = new File("szemelyi.txt"); 
         BufferedReader br = new BufferedReader(new FileReader(file)); 
-        String s;
+        String s=br.readLine();
         while ((s = br.readLine()) != null){
             String[] parts = s.split("\t");
             jComboBox1.addItem(parts[0]);
@@ -121,6 +121,9 @@ public class Menu4 extends javax.swing.JFrame {
         Kiir = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        KiirKedvMarad = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Személyi adózás kalkulátor");
@@ -230,6 +233,10 @@ public class Menu4 extends javax.swing.JFrame {
 
         jLabel9.setText("Ft");
 
+        jLabel10.setText("Nem felhasznált adókedvezmény:");
+
+        jLabel11.setText("Ft");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -239,68 +246,80 @@ public class Menu4 extends javax.swing.JFrame {
                 .addComponent(LabelHiba)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel5))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel5))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox7)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel8)
+                                .addGap(412, 412, 412))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jCheckBox5)
-                                        .addGap(34, 34, 34)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jCheckBox6)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jRadioButton2)
-                                                    .addGap(38, 38, 38)
-                                                    .addComponent(jRadioButton3)
-                                                    .addGap(35, 35, 35)
-                                                    .addComponent(jRadioButton4))
-                                                .addComponent(jCheckBox8)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGap(25, 25, 25)
-                                                    .addComponent(Szamol)))
+                                        .addGap(35, 35, 35)
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(32, 32, 32)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCheckBox7)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(Kiir, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(jCheckBox5)
+                                                        .addGap(34, 34, 34)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(jCheckBox6)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addComponent(jRadioButton2)
+                                                                    .addGap(38, 38, 38)
+                                                                    .addComponent(jRadioButton3)
+                                                                    .addGap(35, 35, 35)
+                                                                    .addComponent(jRadioButton4))
+                                                                .addComponent(jCheckBox8)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addGap(25, 25, 25)
+                                                                    .addComponent(Szamol)))
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(KiirKedvMarad, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(jLabel11))
+                                                                    .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(Kiir, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(jLabel9)))
+                                                                .addGap(24, 24, 24))))
+                                                    .addComponent(jRadioButton1))
+                                                .addGap(18, 18, 18)
+                                                .addComponent(RadioButton3Plusz)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel7)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel9)
-                                                .addGap(24, 24, 24))))
-                                    .addComponent(jRadioButton1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(RadioButton3Plusz))))
+                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(35, 35, 35)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel2)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8)
-                        .addGap(292, 292, 292)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ExitButton)
-                            .addComponent(BackButton))
-                        .addGap(67, 67, 67))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10)
+                        .addGap(412, 412, 412)))
+                .addGap(81, 81, 81)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ExitButton)
+                    .addComponent(BackButton))
+                .addGap(67, 67, 67))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -343,7 +362,7 @@ public class Menu4 extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(jCheckBox7)
                             .addComponent(jCheckBox8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Szamol)
@@ -358,7 +377,12 @@ public class Menu4 extends javax.swing.JFrame {
                             .addComponent(Kiir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9))
-                        .addGap(61, 61, 61))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(KiirKedvMarad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addGap(26, 26, 26))))
         );
 
         pack();
@@ -418,7 +442,7 @@ public class Menu4 extends javax.swing.JFrame {
     }    
     
     
-    
+    Integer csaladiadokedvezmeny=0;
     
     
     if (jCheckBox5.getModel().isSelected()){
@@ -455,12 +479,40 @@ public class Menu4 extends javax.swing.JFrame {
         hazas=0;
     }
     
-    Integer fiz=Integer.parseInt(fizetes);
-    Integer szja=lista.get(jComboBox1.getSelectedIndex())[0];
-    Integer nyugdij=lista.get(jComboBox1.getSelectedIndex())[1];
-    Integer eu=lista.get(jComboBox1.getSelectedIndex())[2];
     
-    netto=fiz-((fiz*(szja/100.0))+(fiz*(nyugdij/100.0))+(fiz*(eu/100.0)))+potlek+hazas;
+    if (buttonGroup1.isSelected(RadioButton3Plusz.getModel())){
+        gyerekSzam=jTextField2.getText();
+        csaladiadokedvezmeny=33000*(Integer.parseInt(gyerekSzam));
+    }else if (buttonGroup1.isSelected(jRadioButton1.getModel())){
+        csaladiadokedvezmeny=0;
+    }else if (buttonGroup1.isSelected(jRadioButton2.getModel())){
+        csaladiadokedvezmeny=10000;
+    }else if (buttonGroup1.isSelected(jRadioButton3.getModel())){
+        csaladiadokedvezmeny=17500;
+    }else{
+        csaladiadokedvezmeny=33000*3;
+    }
+    
+    double fiz=Double.parseDouble(fizetes);
+    double szja=fiz * lista.get(jComboBox1.getSelectedIndex())[0]/100.0;
+    double nyugdij=fiz * lista.get(jComboBox1.getSelectedIndex())[1]/100.0;
+    double eu=fiz * lista.get(jComboBox1.getSelectedIndex())[2]/100.0;
+    double munk= fiz * 0.015;
+    
+    double osszado = szja+nyugdij+eu;
+    
+    double osszadokedv = Double.parseDouble(hazas.toString()) + csaladiadokedvezmeny;
+    
+    if (osszado-osszadokedv<=munk){
+        Double seged=osszadokedv-(osszado-munk);
+        KiirKedvMarad.setText(seged.toString());
+        osszado=munk;
+    }else{
+        KiirKedvMarad.setText("0");
+        osszado = osszado-osszadokedv;
+    }
+    
+    netto=fiz-osszado+potlek;
     Kiir.setText(Double.toString(netto)); 
     
     //System.out.println(netto);
@@ -520,6 +572,7 @@ public class Menu4 extends javax.swing.JFrame {
     private javax.swing.JButton BackButton;
     private javax.swing.JButton ExitButton;
     private javax.swing.JTextField Kiir;
+    private javax.swing.JTextField KiirKedvMarad;
     private javax.swing.JLabel LabelHiba;
     private javax.swing.JRadioButton RadioButton3Plusz;
     private javax.swing.JButton Szamol;
@@ -536,6 +589,8 @@ public class Menu4 extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

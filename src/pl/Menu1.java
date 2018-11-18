@@ -5,6 +5,9 @@ package pl;
 //import java.awt.event.ActionListener;
 //import java.awt.event.WindowAdapter;
 //import java.awt.event.WindowEvent;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 //import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -23,7 +27,10 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.StackedXYBarRenderer;
+import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.xy.CategoryTableXYDataset;
+import org.jfree.ui.RefineryUtilities;
+import static pl.PieChart.dataset;
 //import java.lang.math.BigDecimal;
 
 
@@ -51,13 +58,13 @@ public class Menu1 extends javax.swing.JFrame {
         initComponents();
         File file = new File("be.txt"); 
         BufferedReader br = new BufferedReader(new FileReader(file)); 
-        String s;
+        String s=br.readLine();
         while ((s = br.readLine()) != null){
             String[] parts = s.split("\t");
             ComboBoxA.addItem(parts[0]);
             ComboBoxB.addItem(parts[0]);
-            Integer[] szamok = new Integer[15];
-            for (Integer i=0;i<15;i++){
+            Integer[] szamok = new Integer[13];
+            for (Integer i=0;i<13;i++){
                 szamok[i]=Integer.parseInt(parts[i+1]);
             }
             myList.add(szamok);
@@ -151,11 +158,9 @@ public class Menu1 extends javax.swing.JFrame {
                 {"Szakképzési hozzájárulás", null, null, null},
                 {"Keresőképes lakosok száma(MFő)", null, null, null},
                 {"Keresőképes lakosok átlagkeresete", null, null, null},
-                {"Társasági adót fizető vállalkozások átlagos adózás előtti eredménye (MFt)", null, null, null},
+                {"Társasági adót fizető vállalkozások összes adózás előtti eredménye (MFt)", null, null, null},
                 {"Jövedéki adóból származó bevétel (MFt)", null, null, null},
-                {"27%-os ÁFÁ-ból származó bevétel(MFt)", null, null, null},
-                {"18%-os ÁFÁ-ból származó bevétel(tej, terjtermékek,pékáru,cukrászsütemény,szolgáltatás,stb.)(MFt)", null, null, null},
-                {"5%-os ÁFÁ-ból származó bevétel(humán gyógyszerek, napilapok,könyv,folyóirat,szolgáltatás,stb)(MFt)", null, null, null}
+                {"ÁFÁ-ból származó bevétel(MFt)", null, null, null}
             },
             new String [] {
                 "Értékek", "Adórendszer1", "", "Adórendszer2"
@@ -266,11 +271,11 @@ public class Menu1 extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 686, Short.MAX_VALUE)
+                .addGap(0, 682, Short.MAX_VALUE)
                 .addComponent(ComboBoxA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190)
+                .addGap(282, 282, 282)
                 .addComponent(ComboBoxB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(281, 281, 281))
+                .addGap(189, 189, 189))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -283,67 +288,65 @@ public class Menu1 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(248, 248, 248)
                 .addComponent(Adoek_btn)
+                .addGap(188, 188, 188)
+                .addComponent(CompareButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Bevetel_btn)
                 .addGap(257, 257, 257))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(62, 62, 62)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(AdoekB, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel11))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel1))
-                                        .addGap(442, 442, 442)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel9))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel8)))))
-                                .addGap(25, 25, 25))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(AdoekB, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel11))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(308, 308, 308)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel6))
-                                .addGap(91, 91, 91)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(AdoekA, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(1, 1, 1)))
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel1))
+                                .addGap(442, 442, 442)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel5))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel14))))
+                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel9))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel8)))))
+                        .addGap(25, 25, 25))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(495, 495, 495)
-                        .addComponent(DiagButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(539, 539, 539)
-                        .addComponent(CompareButton)))
+                        .addGap(308, 308, 308)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel6))
+                        .addGap(91, 91, 91)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(AdoekA, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(1, 1, 1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel14)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(500, 500, 500)
+                .addComponent(DiagButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -362,8 +365,8 @@ public class Menu1 extends javax.swing.JFrame {
                     .addComponent(ComboBoxA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboBoxB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
@@ -391,18 +394,18 @@ public class Menu1 extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(jLabel15)
                     .addComponent(jLabel13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(CompareButton)
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Bevetel_btn)
-                        .addGap(39, 39, 39))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Bevetel_btn)
+                            .addComponent(CompareButton))
+                        .addGap(87, 87, 87))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Adoek_btn)
-                        .addGap(30, 30, 30)))
-                .addComponent(DiagButton)
-                .addGap(25, 25, 25))
+                        .addGap(12, 12, 12)
+                        .addComponent(DiagButton)
+                        .addGap(43, 43, 43))))
         );
 
         pack();
@@ -429,7 +432,7 @@ public class Menu1 extends javax.swing.JFrame {
         Integer orszag2 = ComboBoxB.getSelectedIndex();
         TableAdok.setValueAt(ComboBoxA.getItemAt(orszag1), 0, 1);
         TableAdok.setValueAt(ComboBoxB.getItemAt(orszag2), 0, 3);
-        for (Integer i=0;i<15;i++){
+        for (Integer i=0;i<13;i++){
                 TableAdok.setValueAt(myList.get(orszag1)[i], i+1, 1);
                 TableAdok.setValueAt(myList.get(orszag2)[i], i+1, 3);
               
@@ -486,12 +489,12 @@ public class Menu1 extends javax.swing.JFrame {
        
       double munkaltatobol2=(((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*((munkaltat/100.00)+1))-(myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00))*12;//EZT IS
       
-     double BevetelOrszag1=munkavallalobol1+munkaltatobol1+(myList.get(orszag1)[10]*(myList.get(orszag1)[0]/100.00))+myList.get(orszag1)[11]+myList.get(orszag1)[12]+myList.get(orszag1)[13]+myList.get(orszag1)[14];
+     double BevetelOrszag1=munkavallalobol1+munkaltatobol1+(myList.get(orszag1)[10]*(myList.get(orszag1)[0]/100.00))+myList.get(orszag1)[11]+myList.get(orszag1)[12];
      String b_double =Double.toString(BevetelOrszag1);
      jTextField8.setText(b_double.substring(0, 4));
       
       
-     double BevetelOrszag2=munkavallalobol2+munkaltatobol2+(myList.get(orszag2)[10]*(myList.get(orszag2)[0]/100.00))+myList.get(orszag2)[11]+myList.get(orszag2)[12]+myList.get(orszag2)[13]+myList.get(orszag2)[14];
+     double BevetelOrszag2=munkavallalobol2+munkaltatobol2+(myList.get(orszag2)[10]*(myList.get(orszag2)[0]/100.00))+myList.get(orszag2)[11]+myList.get(orszag2)[12];
      String b2_double =Double.toString(BevetelOrszag2);
      jTextField9.setText(b2_double.substring(0, 4));
   
@@ -510,72 +513,83 @@ public class Menu1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         Integer orszag1 = ComboBoxA.getSelectedIndex();
         Integer orszag2 = ComboBoxB.getSelectedIndex();
-        CategoryTableXYDataset dataset = new CategoryTableXYDataset();
-        //OrszágA
-     
-      Integer munkavallalo= myList.get(orszag1)[3]+myList.get(orszag1)[4]+myList.get(orszag1)[5];
-      Integer munkaltato= myList.get(orszag1)[6]+myList.get(orszag1)[7];
 
-      double munkaltatobol=((((myList.get(orszag1)[8]*myList.get(orszag1)[9])/1000000.00)*((munkaltato/100.00)+1))-(myList.get(orszag1)[8]*(myList.get(orszag1)[9])/1000000.00))*12; //UGYANAZ VAN IT IS
-      double munkavallalobol =((myList.get(orszag1)[8]*((myList.get(orszag1)[9])/1000000.00))*(1-(munkavallalo/100.00)))*12; //ITT IS
-      
-      double orszagAbevetellakos=(munkaltatobol+munkavallalobol);
-      double orszagAbevetelvallalt=myList.get(orszag1)[10]*(myList.get(orszag1)[0]/100.00);
-      int jovedekiadoA=myList.get(orszag1)[13];
-      
-      int rendesAfaA=myList.get(orszag1)[12];
-      int kisebbAfaA=myList.get(orszag1)[13];
-      int kicsiAfaA=myList.get(orszag1)[14];
-      
-      
-      dataset.add(1.0,orszagAbevetellakos,"Munkabérekből származó bevétel");
-      dataset.add(1.0,orszagAbevetelvallalt,"Társasági adóból származó bevétel");
-      dataset.add(1.0,jovedekiadoA,"Jövedéki adóból származó bevétel");
-      dataset.add(1.0,rendesAfaA,"27%-os ÁFÁ-ból származó bevétel");
-      dataset.add(1.0,kisebbAfaA,"18%-os ÁFÁ-ból származó bevétel");
-      dataset.add(1.0,kicsiAfaA,"5%-os ÁFÁ-ból származó bevétel");
-      
-        //OrszágB
-        Integer munkaval= myList.get(orszag2)[3]+myList.get(orszag2)[4]+myList.get(orszag2)[5];
-        Integer munkaltat= myList.get(orszag2)[6]+myList.get(orszag2)[7];
+//országA
+        dataset = new DefaultPieDataset();
         
-        double munkaltatobol2=(((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*((munkaltat/100.00)+1))-(myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00))*12; //ITT IS
-        double orszagBbevetellakos=((myList.get(orszag2)[8]*(myList.get(orszag2)[9])/1000000.00)*(1-(munkaval/100.00)))*12+munkaltatobol2; //ITT IS
+        double munkavallaloA= (myList.get(orszag1)[3]+myList.get(orszag1)[4]+myList.get(orszag1)[5])/100.00;
+        double munkaltatoA= (myList.get(orszag1)[6]+myList.get(orszag1)[7])/100.00;
+
+        double munkaltatobolA=myList.get(orszag1)[8]*myList.get(orszag1)[9]*munkaltatoA*12; 
+        double munkavallalobolA =myList.get(orszag1)[8]*myList.get(orszag1)[9]*munkavallaloA*12; 
+      
+        double orszagAbevetellakos=(munkaltatobolA+munkavallalobolA);
+        double orszagAbevetelvallalt=myList.get(orszag1)[10]*(myList.get(orszag1)[0]/100.00);
+        int jovedekiadoA=myList.get(orszag1)[11];
+      
+        dataset.setValue( "Munkabérekből származó bevétel" , new Double( orszagAbevetellakos ) ); 
+        dataset.setValue( "Társasági adóból származó bevétel" , new Double( orszagAbevetelvallalt ) );
+        dataset.setValue( "Jövedéki adóból származó bevétel" , new Double( jovedekiadoA ) ); 
+        dataset.setValue( "ÁFA-ból származó bevétel" , new Double( myList.get(orszag1)[12] ) ); 
+        PieChart demo = new PieChart(ComboBoxA.getItemAt(orszag1),dataset); 
+        demo.setSize( 560 , 367 );
+        demo.setLayout(null);
+        JButton ki = new JButton();
+        ki.setText("Vissza");
+        ki.setFont(new Font("Arial", Font.PLAIN, 12));
+        ki.setBounds(0, 0, 45, 15);
+        ki.setSize(80,40);
+        ki.setLayout(null);
+        demo.add(ki);
+        ki.addActionListener(new ActionListener() {
+            @Override public void actionPerformed (ActionEvent e) {
+                demo.dispose();
+            }
+        });
+        ki.setVisible(true);
+        RefineryUtilities.positionFrameOnScreen(demo, 0, 0);
+//        demo.setDefaultCloseOperation(PieChart.DISPOSE_ON_CLOSE);
+        demo.setVisible( true ); 
+
+        
+        
+//országB
+        dataset = new DefaultPieDataset();
+        
+        double munkavallaloB= (myList.get(orszag2)[3]+myList.get(orszag2)[4]+myList.get(orszag2)[5])/100.00;
+        double munkaltatoB= (myList.get(orszag2)[6]+myList.get(orszag2)[7])/100.00;
+
+        double munkaltatobolB=myList.get(orszag2)[8]*myList.get(orszag2)[9]*munkaltatoB*12; 
+        double munkavallalobolB =myList.get(orszag2)[8]*myList.get(orszag2)[9]*munkavallaloB*12; 
+      
+        double orszagBbevetellakos=(munkaltatobolB+munkavallalobolB);
         double orszagBbevetelvallalt=myList.get(orszag2)[10]*(myList.get(orszag2)[0]/100.00);
-        int jovedekiadoB=myList.get(orszag2)[13];
-        int rendesAfaB=myList.get(orszag2)[12];
-        int kisebbAfaB=myList.get(orszag2)[13];
-        int kicsiAfaB=myList.get(orszag2)[14];
+        int jovedekiadoB=myList.get(orszag1)[11];
         
-        dataset.add(2.5,orszagBbevetellakos,"Munkabérekből származó bevétel");
-        dataset.add(2.5,orszagBbevetelvallalt,"Társasági adóból származó bevétel");
-        dataset.add(2.5,jovedekiadoB,"Jövedéki adóból származó bevétel");
-        dataset.add(2.5,rendesAfaB,"27%-os ÁFÁ-ból származó bevétel");
-        dataset.add(2.5,kisebbAfaB,"18%-os ÁFÁ-ból származó bevétel");
-        dataset.add(2.5,kicsiAfaB,"5%-os ÁFÁ-ból származó bevétel");
-        
-        XYPlot plot = new XYPlot(dataset,new NumberAxis(ComboBoxA.getItemAt(orszag1)+'-'+ComboBoxB.getItemAt(orszag2)), new NumberAxis("%"),new StackedXYBarRenderer());
-        JFreeChart chart = new JFreeChart(plot);
-        ChartPanel chartPanel = new ChartPanel(chart);
-        JFrame frame = new JFrame("Bevételeket összehasonlító diagramm");
-        frame.setContentPane(chartPanel);
-        frame.pack();
-        frame.setLayout(null);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        JButton ki = new JButton();
-//        ki.setText("V");
-//        ki.setFont(new Font("Arial", Font.PLAIN, 10));
-//        ki.setBounds(0, 330, 15, 15);
-//        ki.setSize(40,40);
-//        ki.setLayout(null);
-//        frame.add(ki);
-//        ki.addActionListener(new ActionListener() {
-//            @Override public void actionPerformed (ActionEvent e) {
-//                frame.dispose();
-//            }
-//        });
-//        ki.setVisible(true);
-        frame.setVisible(true);
+        dataset.setValue( "Munkabérekből származó bevétel" , new Double( orszagBbevetellakos ) ); 
+        dataset.setValue( "Társasági adóból származó bevétel" , new Double( orszagBbevetelvallalt ) );
+        dataset.setValue( "Jövedéki adóból származó bevétel" , new Double( jovedekiadoB ) ); 
+        dataset.setValue( "ÁFA-ból származó bevétel" , new Double( myList.get(orszag2)[12] ) ); 
+        PieChart demo2 = new PieChart(ComboBoxB.getItemAt(orszag2),dataset); 
+        demo2.setSize( 560 , 367 );
+        demo2.setLayout(null);
+        JButton ki2 = new JButton();
+        ki2.setText("Vissza");
+        ki2.setFont(new Font("Arial", Font.PLAIN, 12));
+        ki2.setBounds(0, 0, 45, 15);
+        ki2.setSize(80,40);
+        ki2.setLayout(null);
+        demo2.add(ki2);
+        ki2.addActionListener(new ActionListener() {
+            @Override public void actionPerformed (ActionEvent e) {
+                demo2.dispose();
+            }
+        });
+        ki2.setVisible(true);
+        RefineryUtilities.centerFrameOnScreen(demo2);
+//        demo.setDefaultCloseOperation(PieChart.DISPOSE_ON_CLOSE);
+        demo2.setVisible( true ); 
+//        frame.setVisible(true);
     }//GEN-LAST:event_Bevetel_btnActionPerformed
 
     private void DiagButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiagButtonActionPerformed
@@ -609,19 +623,6 @@ public class Menu1 extends javax.swing.JFrame {
         frame.pack();
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        JButton ki = new JButton();
-//        ki.setText("V");
-//        ki.setFont(new Font("Arial", Font.PLAIN, 10));
-//        ki.setBounds(0, 330, 15, 15);
-//        ki.setSize(40,40);
-//        ki.setLayout(null);
-//        frame.add(ki);
-//        ki.addActionListener(new ActionListener() {
-//            @Override public void actionPerformed (ActionEvent e) {
-//                frame.dispose();
-//            }
-//        });
-//        ki.setVisible(true);
         frame.setVisible(true);
     }//GEN-LAST:event_DiagButtonActionPerformed
 
@@ -646,19 +647,6 @@ public class Menu1 extends javax.swing.JFrame {
         frame.pack();
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        JButton ki = new JButton();
-//        ki.setText("V");
-//        ki.setFont(new Font("Arial", Font.PLAIN, 10));
-//        ki.setBounds(0, 330, 15, 15);
-//        ki.setSize(40,40);
-//        ki.setLayout(null);
-//        frame.add(ki);
-//        ki.addActionListener(new ActionListener() {
-//            @Override public void actionPerformed (ActionEvent e) {
-//                frame.dispose();
-//            }
-//        });
-//        ki.setVisible(true);
         frame.setVisible(true);
     }//GEN-LAST:event_Adoek_btnActionPerformed
 

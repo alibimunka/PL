@@ -5,9 +5,6 @@
  */
 package pl;
 
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,10 +13,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JButton;
-import org.jfree.data.general.DefaultPieDataset;
-import org.jfree.ui.RefineryUtilities;
-import static pl.PieChart.dataset;
+import javax.swing.JFrame;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.StackedXYBarRenderer;
+import org.jfree.data.xy.CategoryTableXYDataset;
 
 /**
  *
@@ -37,12 +37,12 @@ public class Menu3 extends javax.swing.JFrame {
         initComponents();
         File file = new File("be.txt"); 
         BufferedReader br = new BufferedReader(new FileReader(file)); 
-        String s;
+        String s=br.readLine();
         while ((s = br.readLine()) != null){
             String[] parts = s.split("\t");
             STRList.add(parts[0]);
-            Integer[] szamok = new Integer[8];
-            for (Integer i=0;i<8;i++){
+            Integer[] szamok = new Integer[13];
+            for (Integer i=0;i<13;i++){
                 szamok[i]=Integer.parseInt(parts[i+1]);
             }
             INTList.add(szamok);
@@ -82,7 +82,7 @@ public class Menu3 extends javax.swing.JFrame {
             }
         });
 
-        CountryBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Társasági adó", "Maximális jövedelem adó", "Normál ÁFA kulcs", "SZJA", "Nyugdíjjárulék", "Egészségbiztosítási és munkaerőpiaci járulék", "SZOCHO", "Szakképzési hozzájárulás" }));
+        CountryBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Társasági adó", "Maximális jövedelem adó", "Normál ÁFA kulcs", "SZJA", "Nyugdíjjárulék", "Egészségbiztosítási és munkaerőpiaci járulék", "SZOCHO", "Szakképzési hozzájárulás", "Keresőképes lakosok száma (Mfő)", "Keresőképes lakosok átlagkeresete (Ft)", "Társasáfi adót fizető vállalkozások összes adózás előtti eredménye (MFt)", "Jövedéki adóból származó bevétel (MFt)", "ÁFA-ból származó bevétel (MFt)" }));
 
         HasonlitButton.setText("Összehasonlít");
         HasonlitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class Menu3 extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel1.setText("Válassza ki azt az adót, ami alapján össze szeretné hasonlítani az országokat!");
+        jLabel1.setText("Válassza ki azt az adatot, ami alapján össze szeretné hasonlítani az országokat!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,23 +101,22 @@ public class Menu3 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(135, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ExitButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BackButton, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(CountryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(113, 113, 113)
+                                .addComponent(BackButton))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addComponent(jLabel1))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(194, 194, 194)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(CountryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(80, 80, 80)
-                                        .addComponent(HasonlitButton)))))
-                        .addGap(0, 54, Short.MAX_VALUE)))
+                                .addGap(274, 274, 274)
+                                .addComponent(HasonlitButton)))
+                        .addGap(0, 39, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -128,10 +127,10 @@ public class Menu3 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
-                .addComponent(BackButton)
-                .addGap(23, 23, 23)
-                .addComponent(CountryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BackButton)
+                    .addComponent(CountryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addComponent(HasonlitButton)
                 .addGap(83, 83, 83))
         );
@@ -153,30 +152,23 @@ public class Menu3 extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void HasonlitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HasonlitButtonActionPerformed
-        Integer select = CountryBox.getSelectedIndex();
-        dataset = new DefaultPieDataset( );
-        for (Integer i=0;i<8;i++){
-            dataset.setValue( STRList.get(i) , new Double( INTList.get(i)[select] ) ); 
+
+        Integer orszag= CountryBox.getSelectedIndex();
+        CategoryTableXYDataset dataset = new CategoryTableXYDataset();
+       
+        for (Integer i=0;i<STRList.size();i++){
+            dataset.add(1.0+1.5*i,INTList.get(i)[orszag],STRList.get(i));
         }
-        PieChart demo = new PieChart(CountryBox.getItemAt(CountryBox.getSelectedIndex()),dataset); 
-        demo.setSize( 560 , 367 );
-        demo.setLayout(null);
-        JButton ki = new JButton();
-        ki.setText("Vissza");
-        ki.setFont(new Font("Arial", Font.PLAIN, 12));
-        ki.setBounds(0, 0, 45, 15);
-        ki.setSize(80,40);
-        ki.setLayout(null);
-        demo.add(ki);
-        ki.addActionListener(new ActionListener() {
-            @Override public void actionPerformed (ActionEvent e) {
-                demo.dispose();
-            }
-        });
-        ki.setVisible(true);
-        RefineryUtilities.centerFrameOnScreen( demo );
-//        demo.setDefaultCloseOperation(PieChart.DISPOSE_ON_CLOSE);
-        demo.setVisible( true ); 
+        
+        XYPlot plot = new XYPlot(dataset,new NumberAxis("Ország"), new NumberAxis(""),new StackedXYBarRenderer());
+        JFreeChart chart = new JFreeChart(plot);
+        ChartPanel chartPanel = new ChartPanel(chart);
+        JFrame frame = new JFrame(CountryBox.getItemAt(orszag)+" összehasonlító diagramm");
+        frame.setContentPane(chartPanel);
+        frame.pack();
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setVisible(true);
     }//GEN-LAST:event_HasonlitButtonActionPerformed
 
     /**
