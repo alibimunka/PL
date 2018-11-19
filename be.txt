@@ -1,10 +1,10 @@
 //Ország	Társasági adó	Maximális jövedelem adó	Normál ÁFA kulcs	SZJA	Nyugdíjjárulék	Egészségbiztosítási és munkaerőpiaci járulék	SZOCHO	Szakképzési hozzájárulás	Keresőképes lakosok száma (Mfő)	Keresőképes lakosok átlagkeresete (Ft)	Társasági adót fizető vállalkozások összes adózás előtti eredménye (MFt)	Jövedéki adóból származó bevétel (MFt)	ÁFA-ból származó bevétel (MFt)
-Magyarország	9	32	27	15	10	9	19	2	5	340000	4106666	1099300	3800000
-Ausztria	25	55	20	12	10	5	15	10	15	500000	20000	2000	300000
-Belgium	29	50	21	13	7	10	14	3	12	4000000	50000	3000	500000
-Németország	23	48	19	16	10	12	9	5	20	8000000	80000	50000	700000
-Franciaország	33	49	20	11	7	8	14	7	21	7000000	60000	45000	300000
-Szlovénia	22	50	22	10	15	5	12	4	6	4000000	40000	20000	100000
-Szlovákia	22	50	20	7	7	6	10	5	5	4500000	40000	30000	20000
-Spanyolország	25	45	21	12	10	4	7	2	20	9000000	80000	80000	900000
-Svédország	22	70	25	14	13	10	6	7	15	6500000	75000	35000	800000
+Magyarország	9	32	27	15	10	9	19	2	4	340000	4106666	1099300	3800000
+Ausztria	25	55	20	12	10	5	15	10	4	694090	20000	2000	300000
+Belgium	29	50	21	13	7	10	14	3	4	1010910	50000	3000	500000
+Németország	23	48	19	16	10	12	9	3	45	802900	80000	50000	700000
+Franciaország	33	49	20	11	7	8	14	7	28	796700	60000	45000	300000
+Szlovénia	22	50	22	10	15	5	12	4	1	503440	40000	20000	100000
+Szlovákia	22	50	20	7	7	6	10	5	3	306900	40000	30000	20000
+Spanyolország	25	45	21	12	10	4	7	2	20	664330	80000	80000	900000
+Svédország	22	70	25	14	13	10	6	7	5	1012150	75000	35000	800000
